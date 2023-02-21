@@ -38,8 +38,9 @@ How to gather and visualize the cryptocurrency option data:
   2. Ensure that the required libraries are installed.
   3. Call OptionData().option_data() using the specified `currency`, `start_date` and `end_date` parameters (e.g. option_data = OptionData("BTC", dt(2023, 2, 20, 0, 0, 0), dt(2023, 2, 22, 0, 0, 0)).option_data().
   4. Visualize the gathered option data one of the following functions:
-  * iv_smile(`option data`, optional = `start date`, optional = `end date`)
-  * iv_surface(`option data`, optional = `start date`, optional = `end date`)
+
+      * iv_smile(option data, optional = `start date`, optional = `end date`)
+      * iv_surface(option data, optional = `start date`, optional = `end date`)
     
 
 ## Examples
