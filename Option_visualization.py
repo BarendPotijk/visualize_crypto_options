@@ -62,12 +62,12 @@ class OptionData():
 
 #Figures
 def iv_smile(option_data, start_date = None, end_date = None):
+    option_data = option_data[option_data["time_to_maturity"]>1]
     if start_date is not None:
         option_data = option_data[option_data["date_time"].apply(lambda x: x.date()) >= start_date]
-        option_date = option_data.reset_index(inplace = True, drop = True)
     if end_date is not None:
         option_data = option_data[option_data["date_time"].apply(lambda x: x.date()) <= end_date]
-        option_date = option_data.reset_index(inplace = True, drop = True)
+    option_data.reset_index(inplace = True, drop = True)
     fig = go.Figure()
     for maturity_date in sorted(set(option_data["maturity_date"])):
         _data = option_data[option_data["maturity_date"] == maturity_date]
@@ -94,6 +94,7 @@ def iv_smile(option_data, start_date = None, end_date = None):
         legend_title_text='Maturity dates',
         xaxis_title = "Moneyness",
         yaxis_title = "Implied Volatility", 
+        template = 'seaborn',
         hoverlabel = dict(
             bgcolor="white",
             font_size=16,
@@ -101,20 +102,21 @@ def iv_smile(option_data, start_date = None, end_date = None):
     return fig
 
 def iv_surface(option_data, start_date = None, end_date = None):
+    option_data = option_data[option_data["time_to_maturity"]>1]
     if start_date is not None:
         option_data = option_data[option_data["date_time"].apply(lambda x: x.date()) >= start_date]
-        option_date = option_data.reset_index(inplace = True, drop = True)
     if end_date is not None:
         option_data = option_data[option_data["date_time"].apply(lambda x: x.date()) <= end_date]
-        option_date = option_data.reset_index(inplace = True, drop = True)
-    fig = go.Figure(
-        data = [go.Scatter3d(
-            x=option_data["moneyness"],
-            y=option_data["time_to_maturity"],
-            z=option_data["iv"],
-            name = "instrument_name",
-            text = option_data["instrument_name"],
-            customdata = option_data["date_time"],
+    option_data.reset_index(inplace = True, drop = True)
+    fig = go.Figure()
+    for maturity_date in sorted(set(option_data["maturity_date"])):
+        _data = option_data[option_data["maturity_date"] == maturity_date]
+        fig.add_trace(go.Scatter3d(
+            x=_data["moneyness"],
+            y=_data["time_to_maturity"],
+            z=_data["iv"],
+            text = _data["instrument_name"],
+            customdata = _data["date_time"],
             hovertemplate=
                 "<b>%{text}</b><br><br>" +
                 "Implied volatility: %{z:.3f}<br>" +
@@ -125,11 +127,11 @@ def iv_surface(option_data, start_date = None, end_date = None):
             mode='markers',
             marker=dict(
                 size=4,
-                color=option_data["iv"],                
+                color=_data["iv"],                
                 colorscale='Viridis',   
                 opacity=0.8
-            ))])
-
+            ),
+        name = f"{maturity_date.date()}"))
     fig.update_layout(
         title = f"{option_data['kind'][0]} Volatility Surface from {min(option_data['date_time']).date()} to {max(option_data['date_time']).date()}",
         title_x=0.5,
@@ -140,6 +142,7 @@ def iv_surface(option_data, start_date = None, end_date = None):
         autosize=False,
         width=1000,
         height=1000,
+        template = 'seaborn',
         hoverlabel = dict(
             bgcolor="white",
             font_size=16,
@@ -147,4 +150,3 @@ def iv_surface(option_data, start_date = None, end_date = None):
     )
 
     return fig
-
