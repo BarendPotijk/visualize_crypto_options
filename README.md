@@ -37,7 +37,7 @@ How to gather and visualize the cryptocurrency option data:
   1. Open the script in your preferred Python editor.
   2. Ensure that the required libraries are installed.
   3. Call OptionData(`currency`, `start_date`, `end_date`).option_data().
-  4. Visualize the gathered option data one of the following functions:
+  4. Visualize the gathered option data using one of the following functions (the optional time can be used to filter in the intial time range):
 
       * iv_smile(option data, optional = `start date`, optional = `end date`)
       * iv_surface(option data, optional = `start date`, optional = `end date`)
@@ -52,7 +52,7 @@ The iv_smile function displays the implied volatility smile for a given `start_d
 </a>
 <br />
 <br />
-Similarly the function iv_surface displays the volatility surface of all trades given the specified time range:
+Similarly the function iv_surface displays the volatility surface of all trades given the specified `start_date` to `end_date`:
 <br />
 <br />
 <a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/EXAMPLES/iv_surface.html">
