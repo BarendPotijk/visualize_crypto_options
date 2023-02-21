@@ -47,7 +47,7 @@ How to gather and visualize the cryptocurrency option data:
 The iv_smile function displays the implied volatility smile for a given `start_date` to `end_date`:
 <br />
 <br />
-<a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/EXAMPLES/iv_smile.html">
+<a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/Implied Volatility Smiles.png">
   <img src="Images/Implied Volatility Smiles.png">
 </a>
 <br />
@@ -55,7 +55,7 @@ The iv_smile function displays the implied volatility smile for a given `start_d
 Similarly the function iv_surface displays the volatility surface of all trades given the specified `start_date` to `end_date`:
 <br />
 <br />
-<a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/EXAMPLES/iv_surface.html">
+<a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/Implied Volatility Surface.png">
   <img src="Images/Implied Volatility Surface.png">
 </a>
 <br /> 
