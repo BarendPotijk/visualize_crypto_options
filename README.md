@@ -38,10 +38,10 @@ To use this script, you will need to have Python 3 and the following libraries i
 
 To gather and visualize cryptocurrency option data using the script, follow these steps:
 
-Open the script (Option_visualization.py) in your preferred Python editor.
-Ensure that the required libraries are installed.
-Call OptionData(`currency`, `start_date`, `end_date`).option_data() to gather option data for the desired time period.
-Visualize the gathered option data using one of the two visualization functions, passing in the option data and any desired time filters.
+  1. Open the script (Option_visualization.py) in your preferred Python editor.
+  2. Ensure that the required libraries are installed.
+  3. Call OptionData(`currency`, `start_date`, `end_date`).option_data() to gather option data for the desired time period.
+  4. Visualize the gathered option data using one of the two visualization functions, passing in the option data and any desired time filters.
 
 ## Examples ##
 Here are some examples of the visualizations that can be created using the script:
