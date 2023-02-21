@@ -36,7 +36,7 @@ To use this script, you will need to have Python 3 and the following libraries i
 How to gather and visualize the cryptocurrency option data:
   1. Open the script in your preferred Python editor.
   2. Ensure that the required libraries are installed.
-  3. Call OptionData().option_data() using the specified `currency`, `start_date` and `end_date` parameters (e.g. option_data = OptionData("BTC", dt(2023, 2, 20, 0, 0, 0), dt(2023, 2, 22, 0, 0, 0)).option_data().
+  3. Call OptionData(`currency`, `start_date`, `end_date`).option_data().
   4. Visualize the gathered option data one of the following functions:
 
       * iv_smile(option data, optional = `start date`, optional = `end date`)
