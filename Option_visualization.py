@@ -126,9 +126,7 @@ def iv_surface(option_data, start_date = None, end_date = None):
                 "<extra></extra>",
             mode='markers',
             marker=dict(
-                size=4,
-                color=_data["iv"],                
-                colorscale='Viridis',   
+                size=4, 
                 opacity=0.8
             ),
         name = f"{maturity_date.date()}"))
