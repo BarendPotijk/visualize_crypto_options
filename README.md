@@ -48,7 +48,7 @@ The iv_smile function displays the implied volatility smile for a given `start_d
 <br />
 <br />
 <a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/EXAMPLES/iv_smile.html">
-  <img src="Images/implied_volatility_smile.png">
+  <img src="Images/Implied Volatility Smiles.png">
 </a>
 <br />
 <br />
@@ -56,7 +56,7 @@ Similarly the function iv_surface displays the volatility surface of all trades 
 <br />
 <br />
 <a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/EXAMPLES/iv_surface.html">
-  <img src="Images/implied_volatility_surface.png">
+  <img src="Images/Implied Volatility Surface.png">
 </a>
 <br /> 
 <br />
