@@ -36,7 +36,7 @@ To use this script, you will need to have Python 3 and the following libraries i
 How to gather the cryptocurrency option data:
   1. Open the script in your preferred Python editor.
   2. Ensure that the required libraries are installed.
-  3. Call OptionData().option_data() using the specified `currency`, `start_date` and `end_date` parameters (e.g. option_data = OptionData("BTC", dt.datetime(2023, 2, 20, 0, 0, 0), dt.datetime(2023, 2, 22, 0, 0, 0)).option_data().
+  3. Call OptionData().option_data() using the specified `currency`, `start_date` and `end_date` parameters (e.g. option_data = OptionData("BTC", dt(2023, 2, 20, 0, 0, 0), dt(2023, 2, 22, 0, 0, 0)).option_data().
   4. Run the script.
 
 How to visualize the gathered option data:
