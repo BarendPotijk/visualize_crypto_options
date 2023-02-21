@@ -40,6 +40,7 @@ How to gather and visualize the cryptocurrency option data:
   4. Visualize the gathered option data one of the following functions:
     * iv_smile(`option data`, optional = `start date`, optional = `end date`)
     * iv_surface(`option data`, optional = `start date`, optional = `end date`)
+    
 
 ## Examples
 The iv_smile function displays the implied volatility smile for a given `start_date` to `end_date`:
