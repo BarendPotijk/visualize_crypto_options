@@ -1,14 +1,13 @@
 <a name="readme-top"></a>
 <br />
+
 <div align="center">
   <a href="https://github.com/BarendPotijk/visualize_crypto_options/">
     <img src="Images/deribit.png" alt="Logo" width="80" height="80">
   </a>
-
 <h3 align="center">Visualize Crypto Option trades</h3>
-
   <p align="center">
-    Visualize Cryptocurrency option trades using Deribit API v2
+    A Python script for visualizing cryptocurrency option trades using the Deribit API v2
     <br />
     <a href="https://github.com/BarendPotijk/visualize_crypto_options/"><strong>Explore the docs »</strong></a>
     <br />
@@ -17,48 +16,47 @@
   </p>
 </div>
 
-## Project description
-The visualize_crypto_options repository visualizes cryptocurrency (BTC, ETH, SOL, USDC) options traded on the cryptocurrency derivative platform Deribit (https://www.deribit.com). 
-All crypto option trades since the inception of the platform are publicly available in the Deribit API v2.1.1 under `https://history.deribit.com/api/v2/public/get_last_trades_by_currency`. 
-For further information and the documentations see https://docs.deribit.com/#public-get_last_trades_by_currency_and_time. 
+##Introduction##
+The visualize_crypto_options repository provides a Python script for visualizing cryptocurrency (BTC, ETH, SOL, USDC) options traded on the Deribit cryptocurrency derivative platform. The script uses the publicly available Deribit API v2.1.1 to gather option trade data and create interactive visualizations using the Plotly library.
 
-## Getting Started ##
+##Project details##
+All crypto option trades since the inception of the Deribit platform are publicly available in the Deribit API v2.1.1 under https://history.deribit.com/api/v2/public/get_last_trades_by_currency. For further information and the documentations see https://docs.deribit.com/#public-get_last_trades_by_currency_and_time.
+
+The script provides two functions for visualizing option trade data:
+
+iv_smile(`option_data`, `start_date`=None, `end_date`=None): displays the implied volatility smile for a given time period.
+iv_surface(`option_data`, `start_date`=None, `end_date`=None): displays the volatility surface of all trades given the specified time period.
+
+##Getting started##
 To use this script, you will need to have Python 3 and the following libraries installed:
 
-  * json
-  * requests
-  * pandas
-  * datetime
-  * plotly
+* json
+* requests
+* pandas
+* datetime
+* plotly
 
-## Running the Script ##
+To gather and visualize cryptocurrency option data using the script, follow these steps:
 
-How to gather and visualize the cryptocurrency option data:
-  1. Open the script (<a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Option_visualization.py">Option_visualization.py</a>) in your preferred Python editor.
-  2. Ensure that the required libraries are installed.
-  3. Call OptionData(`currency`, `start_date`, `end_date`).option_data().
-  4. Visualize the gathered option data using one of the following functions (the optional time can be used to filter in the intial time range):
+Open the script (Option_visualization.py) in your preferred Python editor.
+Ensure that the required libraries are installed.
+Call OptionData(`currency`, `start_date`, `end_date`).option_data() to gather option data for the desired time period.
+Visualize the gathered option data using one of the two visualization functions, passing in the option data and any desired time filters.
 
-      * iv_smile(option data, optional = `start date`, optional = `end date`)
-      * iv_surface(option data, optional = `start date`, optional = `end date`)
-    
+##Examples##
+Here are some examples of the visualizations that can be created using the script:
 
-## Examples
-The iv_smile function displays the implied volatility smile for a given `start_date` to `end_date`:
-<br />
-<br />
-<a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/Implied Volatility Smiles.png">
-  <img src="Images/Implied Volatility Smiles.png">
-</a>
-<br />
-<br />
-Similarly the function iv_surface displays the volatility surface of all trades given the specified `start_date` to `end_date`:
-<br />
-<br />
-<a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/Implied Volatility Surface.png">
-  <img src="Images/Implied Volatility Surface.png">
-</a>
-<br /> 
-<br />
-## Contributing ##
-If you find a bug or would like to suggest an enhancement, please create an issue or submit a pull request.
+* Implied volatility smiles:  
+  The iv_smile function displays the implied volatility smile for a given time period:
+
+  <a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/Implied Volatility Smiles.png">
+    <img src="Images/Implied Volatility Smiles.png">
+  </a>
+  * Implied volatility surface
+  The iv_surface function displays the volatility surface of all trades given the specified time period:
+
+  <a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/Implied Volatility Surface.png">
+    <img src="Images/Implied Volatility Surface.png">
+  </a>
+##Contributing##
+If you find a bug or would like to suggest an enhancement, please create an issue or submit a pull request. We welcome any contributions or feedback to make this script more useful and user-friendly for the cryptocurrency community.
