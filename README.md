@@ -51,15 +51,17 @@ Here are some examples of the visualizations that can be created using the scrip
 
   <div align="center">
     <a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/Implied Volatility Smiles.png">
-      <img src="Images/Implied Volatility Smiles.png" width="75%", height = "75%">
+      <img src="Images/Implied Volatility Smiles.png" width="60%", height = "60%">
     </a>
   </div>
   
   * Implied volatility surface
   The iv_surface function displays the volatility surface of all trades given the specified time period:
-
-  <a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/Implied Volatility Surface.png">
-    <img src="Images/Implied Volatility Surface.png" width="45%", height = "45%">
-  </a>
+  
+  <div align="center">
+    <a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/Implied Volatility Surface.png">
+      <img src="Images/Implied Volatility Surface.png" width="55%", height = "55%">
+    </a>
+  </div>
 ## Contributing ##
 If you find a bug or would like to suggest an enhancement, please create an issue or submit a pull request. We welcome any contributions or feedback to make this script more useful and user-friendly for the cryptocurrency community.
