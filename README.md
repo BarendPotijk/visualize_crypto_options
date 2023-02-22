@@ -22,8 +22,8 @@ All crypto option trades since the inception of the Deribit platform are publicl
 The script provides two functions for visualizing option trade data:
 
 ```python
-iv_smile(`option_data`, `start_date`=None, `end_date`=None): #displays the implied volatility smile for a given time period.
-iv_surface(`option_data`, `start_date`=None, `end_date`=None): #displays the volatility surface of all trades given the specified time period.
+iv_smile(option_data, start_date=None, end_date=None): #displays the implied volatility smile for a given time period.
+iv_surface`option_data, start_date=None, end_date=None): #displays the volatility surface of all trades given the specified time period.
 ```
 
 ## Getting started ##
@@ -42,7 +42,7 @@ To gather and visualize cryptocurrency option data using the script, follow thes
   3. Call OptionData().option_data() to gather option data for the desired time period : <br /> 
      
      ```python
-     OptionData(`currency`, `start_date`, `end_date`).option_data() 
+     OptionData(currency, start_date, end_date).option_data() 
      ```
   5. Visualize the gathered option data using one of the two visualization functions, passing in the option data and any desired time filters.
   
