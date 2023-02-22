@@ -55,8 +55,8 @@ Here are some examples of the visualizations that can be created using the scrip
     </a>
   </div>
   
-* Implied volatility surface
-The iv_surface function displays the volatility surface of all trades given the specified time period:
+* Implied volatility surface:
+  The iv_surface function displays the volatility surface of all trades given the specified time period:
 
 <div align="center">
   <a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/volatility_surface.png">
