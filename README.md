@@ -46,8 +46,9 @@ To gather and visualize cryptocurrency option data using the script, follow thes
 ## Examples ##
 Here are some examples of the visualizations that can be created using the script:
 
-* Implied volatility smiles:  
-  The iv_smile function displays the implied volatility smile for a given time period:
+* Implied volatility smiles: 
+
+  The iv_smile function displays the implied volatility smile for a given time period.
 
   <div align="center">
   
@@ -58,7 +59,7 @@ Here are some examples of the visualizations that can be created using the scrip
   
 * Implied volatility surface:
 
-  The iv_surface function displays the volatility surface of all trades given the specified time period:
+  The iv_surface function displays the volatility surface of all trades given the specified time period.
 
 <div align="center">
   <a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/volatility_surface.png">
