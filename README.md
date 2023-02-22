@@ -39,6 +39,15 @@ To gather and visualize cryptocurrency option data using the script, follow thes
   2. Ensure that the required libraries are installed.
   3. Call OptionData(`currency`, `start_date`, `end_date`).option_data() to gather option data for the desired time period.
   4. Visualize the gathered option data using one of the two visualization functions, passing in the option data and any desired time filters.
+  
+## Parameters ##
+
+| Parameter | Required | Type | Enum | Description |
+| --- | --- | --- | --- | --- |
+| currency | true | string | `BTC`<br /> `ETH` <br /> `SOL` <br /> `USDC`| The currency symbol|
+| start_date | true | datetime object | | The earliest datetime object to return result for. When param is provided trades are returned from the earliest |
+| end_date | true | datetime object | | The most recent datetime object to return result for. Only one of params: start_date, end_date is truly required |
+
 
 ## Examples ##
 Here are some examples of the visualizations that can be created using the script:
