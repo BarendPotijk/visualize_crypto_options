@@ -10,9 +10,6 @@
     A Python script for visualizing cryptocurrency option trades using the Deribit API v2
     <br />
     <a href="https://github.com/BarendPotijk/visualize_crypto_options/"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/BarendPotijk/visualize_crypto_options/tree/main/EXAMPLES">View examples </a>
   </p>
 </div>
 
