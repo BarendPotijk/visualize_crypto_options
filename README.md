@@ -50,8 +50,8 @@ Here are some examples of the visualizations that can be created using the scrip
   The iv_smile function displays the implied volatility smile for a given time period:
 
   <div align="center">
-    <a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/Implied Volatility Smiles.png">
-      <img src="Images/Implied Volatility Smiles.png" width="60%", height = "60%">
+    <a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/volatility_smile.png">
+      <img src="Images/Images/volatility_smile.png" width="60%", height = "60%">
     </a>
   </div>
   
@@ -59,8 +59,8 @@ Here are some examples of the visualizations that can be created using the scrip
   The iv_surface function displays the volatility surface of all trades given the specified time period:
   
   <div align="center">
-    <a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/Implied Volatility Surface.png">
-      <img src="Images/Implied Volatility Surface.png" width="55%", height = "55%">
+    <a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/volatility_surface.png">
+      <img src="Images/volatility_surface.png" width="55%", height = "55%">
     </a>
   </div>
 ## Contributing ##
