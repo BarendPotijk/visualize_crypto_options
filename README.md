@@ -23,7 +23,7 @@ The script provides two functions for visualizing option trade data:
 
 ```python
 iv_smile(option_data, start_date=None, end_date=None): #displays the implied volatility smile for a given time period.
-iv_surface`option_data, start_date=None, end_date=None): #displays the volatility surface of all trades given the specified time period.
+iv_surface(option_data, start_date=None, end_date=None): #displays the volatility surface of all trades given the specified time period.
 ```
 
 ## Getting started ##
