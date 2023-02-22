@@ -45,8 +45,8 @@ To gather and visualize cryptocurrency option data using the script, follow thes
 | Parameter | Required | Type | Enum | Description |
 | --- | --- | --- | --- | --- |
 | currency | true | string | `BTC`<br /> `ETH` <br /> `SOL` <br /> `USDC`| The currency symbol|
-| start_date | true | datetime object | | The earliest datetime object to return result for. When param is provided trades are returned from the earliest |
-| end_date | true | datetime object | | The most recent datetime object to return result for. Only one of params: start_date, end_date is truly required |
+| start_date | true | datetime object | | The earliest datetime object to return result for|
+| end_date | true | datetime object | | The most recent datetime object to return result for|
 
 
 ## Examples ##
