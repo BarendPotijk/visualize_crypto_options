@@ -51,7 +51,7 @@ Here are some examples of the visualizations that can be created using the scrip
 
   <div align="center">
     <a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/volatility_smile.png">
-      <img src="Images/volatility_smile.png" width="55%", height = "55%">
+      <img src="Images/volatility_smile.png" width="65%", height = "65%">
     </a>
   </div>
   
@@ -60,7 +60,7 @@ Here are some examples of the visualizations that can be created using the scrip
   
   <div align="center">
     <a href="https://github.com/BarendPotijk/visualize_crypto_options/blob/main/Images/volatility_surface.png">
-      <img src="Images/volatility_surface.png" width="55%", height = "55%">
+      <img src="Images/volatility_surface.png" width="65%", height = "65%">
     </a>
   </div>
 ## Contributing ##
