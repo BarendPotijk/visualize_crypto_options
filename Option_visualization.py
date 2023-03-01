@@ -16,20 +16,44 @@ def timestamp_to_datetime(timestamp):
                   
 class OptionData():
     
-    def __init__(self, currency, start_date, end_date):
+    def __init__(self, currency:str, start_date:date, end_date:date):
+        """
+        OptionData class constructor that initializes currency, start_date and end_date parameters.
+
+        Parameters:
+            currency (str): currency code e.g. BTC
+            start_date (date): The start date of the time range (inclusive).
+            end_date (date): The end date of the time range (inclusive).
+
+        Returns:
+            pandas.DataFrame: A dataframe of derivative trade data for the specified currency and time range.
+        """
+        
         self.currency = currency
         self.start_date = start_date
         self.end_date = end_date
+    
+        # Validate input arguments
+        assert isinstance(currency, str), "currency must be a string"
+        assert isinstance(start_date, date), "start_date must be a date object"
+        assert isinstance(end_date, date), "end_date must be a date object"
+        assert start_date <= end_date, "start_date must be before or equal to end_date"
 
-    def option_data(self):
+    def option_data(self) -> pd.DataFrame:
+        """
+        Retrieves option data from Deribit API within the specified date range and currency. 
+
+        Returns:
+            pd.DataFrame: DataFrame containing option data
+        """
         option_list = []
         params = {
             "currency": self.currency, 
             "kind": "option",
             "count": 10000,
             "include_old": True,
-            "start_timestamp": date_to_timestamp(self.start_date),
-            "end_timestamp": date_to_timestamp(self.end_date)
+            "start_timestamp": datetime_to_timestamp(self.start_date),
+            "end_timestamp": datetime_to_timestamp(self.end_date)
         }
         
         url = 'https://history.deribit.com/api/v2/public/get_last_trades_by_currency_and_time'
@@ -43,7 +67,7 @@ class OptionData():
                     break
                 option_list.extend(response_data["result"]["trades"])
                 params["start_timestamp"] = response_data["result"]["trades"][-1]["timestamp"] + 1
-                if params["start_timestamp"] >= date_to_timestamp(self.end_date):
+                if params["start_timestamp"] >= datetime_to_timestamp(self.end_date):
                     break
         
         option_data = pd.DataFrame(option_list)
@@ -94,7 +118,7 @@ def iv_smile(option_data, start_date = None, end_date = None):
             ),
         name = f"{maturity_date.date()}"))
     fig.update_layout(
-        title = f"{_data['kind'][0]} Volatility Smiles from {min(_data['date_time']).date()} to {max(_data['date_time']).date()}",
+        title = f"{option_data['kind'][0]} Volatility Smiles from {min(_data['date_time']).date()} to {max(_data['date_time']).date()}",
         title_x=0.5,
         legend_title_text='Maturity dates',
         xaxis_title = "Moneyness",
