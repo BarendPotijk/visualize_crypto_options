@@ -58,6 +58,7 @@ class OptionData():
         option_data["iv"] = round(option_data["iv"]/100,3)
         option_data["time_to_maturity"] = option_data["time_to_maturity"]*365
         option_data.drop(['timestamp'], axis=1, inplace = True)
+        option_data.drop_duplicates(inplace = True)
         return option_data[['instrument_name','date_time','price', 'index_price', 'direction', 'amount', 'kind', 'time_to_maturity','strike_price', 'moneyness' ,'option_type', 'iv', 'maturity_date']]
 
 #Figures
@@ -74,8 +75,8 @@ def iv_smile(option_data, start_date = None, end_date = None):
         fig.add_trace(go.Scatter(
             x=_data["moneyness"],
             y=_data["iv"],
-            text = option_data["instrument_name"],
-            customdata = option_data["moneyness"],
+            text = _data["instrument_name"],
+            customdata = _data["moneyness"],
             hovertemplate=
                 "<b>%{text}</b><br><br>" +
                 "Implied volatility: %{y:.3f}<br>" +
@@ -89,7 +90,7 @@ def iv_smile(option_data, start_date = None, end_date = None):
             ),
         name = f"{maturity_date.date()}"))
     fig.update_layout(
-        title = f"{option_data['kind'][0]} Volatility Smiles from {min(option_data['date_time']).date()} to {max(option_data['date_time']).date()}",
+        title = f"{_data['kind'][0]} Volatility Smiles from {min(_data['date_time']).date()} to {max(_data['date_time']).date()}",
         title_x=0.5,
         legend_title_text='Maturity dates',
         xaxis_title = "Moneyness",
