@@ -6,9 +6,13 @@ from datetime import date, timedelta
 import plotly.graph_objects as go
 
 #Time-related functions
-def datetime_to_timestamp(datetime): return int(dt.timestamp(datetime)*1000)
-def timestamp_to_datetime(timestamp): return dt.fromtimestamp(timestamp/1000)
-def date_to_timestamp(date): return datetime_to_timestamp(dt.combine(date, dt.min.time()))
+def datetime_to_timestamp(datetime_obj): 
+    """Converts a datetime object to a Unix timestamp in milliseconds."""
+    return int(dt.timestamp(datetime_obj)*1000)
+
+def timestamp_to_datetime(timestamp): 
+    """Converts a Unix timestamp in milliseconds to a datetime object."""
+    return dt.fromtimestamp(timestamp/1000)
                   
 class OptionData():
     
